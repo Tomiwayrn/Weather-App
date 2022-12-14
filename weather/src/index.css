@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+.app-container {
+  flex-direction: column !important;
+  color: gainsboro;
+  background: #100e1d !important;
+  overflow: scroll !important;
+}
+
+.temp-btn {
+  background: none;
+  border-radius: 50% ;
+  width: 38px;
+  height: 38px;
+  transition: .5s ease-in;
+  cursor: pointer;
+ 
+  
+}
+.temp-btn:hover{
+  opacity: .5;
+}
+.temp-btn:active {
+  box-shadow: inset 0px 0px 20px black;
+}
+
+.search-places {
+background: #6e707a;
+padding: 10px;
+box-shadow: 3px 3px 20px #100e1d
+}
+.search-container {
+  animation: .2s new ease-in;
+}
+
+.MuiInputBase-root {
+  border: 1px solid #c4bfbf;
+  outline: none;
+  letter-spacing: 2px;
+  padding: 5px;
+  border-radius: 3px;
+  font-family: 'League Spartan', sans-serif !important; 
+}
+
+.Mui-focused {
+  border: 1px solid #ffffff;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-img {
+  animation: 3s rotate ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+.loading-img:hover {
+  animation-play-state: paused;
+}
+
+.loading-text {
+  animation: 1.5s fade ease-in-out;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+.main-card {
+position: relative;
+}
+
+.cards-container, .cardInfo-container {
+  display: grid;
+ grid-template-columns: 1fr ;
+}
+
+
+.bg {
+  position: absolute;
+  opacity: .1;
+  width: 100%;
+
+}
+
+.MuiLinearProgress-root {
+  height: 13px !important;
+  border-radius: 10px !important;
+}
+
+.MuiLinearProgress-colorPrimary {
+  background: #e3f0ff !important;
+}
+
+.MuiLinearProgress-bar {
+  background: rgb(245, 215, 45) !important;
+}
+
+.MuiTypography-root {
+  color: #c4bfbf  !important;
+  font-family:'League Spartan', sans-serif !important;
+}
+
+
+footer {
+position: absolute;
+transform: translateX(-50%);
+bottom: 10%;
+left: 50%;
+box-shadow: 10px 10px 20px #100e1d;
+
+}
+
+@media screen and (min-width: 600px) {
+  .cards-container {
+    display: grid;
+   grid-template-columns: 1fr 1fr ;
+  }
+   
+}
+@media  screen and (min-width: 920px) {
+  .app-container {
+    flex-direction: row !important;
+  
+  }
+
+  .cards-container {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr ;
+  }
+
+  .cardInfo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cardInfo-container .MuiTypography-root {
+    color: red !important;
+    color: #e4dcdc !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+
+}
+
+@media screen and (min-width: 1124px) {
+  .cards-container {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+}
+/* Animations */
+@keyframes new {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform:rotate(360deg);
+  }
+
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
