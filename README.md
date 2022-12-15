@@ -8,7 +8,7 @@
 
 
 
-![screenshot](./screenshot.jpg)
+![screenshot](./screenshot.png)
 
 ### Built With
 
