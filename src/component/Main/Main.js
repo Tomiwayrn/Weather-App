@@ -22,12 +22,14 @@ const Main = ({
     padding = {4}
     flex ={4}
     sx={{
+        minHeight: "612px",
     position: "relative",
+    overflowX: "hidden",
     textAlign: "center"}}
     >
     <Stack 
-    direction
-    sx={{justifyContent: "end"}}
+    
+    sx={{justifyContent: "end", flexDirection: "row"}}
     gap={2}>
 
 
@@ -79,7 +81,7 @@ const Main = ({
           }
         
         <footer >
-            Created by <a href='mailto:afolabiquavious@gmail.com'>Tomiwa</a> Devchallenges.io
+            Created by <a target ="blank" href='mailto:afolabiquavious@gmail.com'>Tomiwa</a> Devchallenges.io
         </footer>
     
     </Box>

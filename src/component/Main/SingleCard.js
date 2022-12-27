@@ -21,7 +21,7 @@ const SingleCard = ({
   
     >
       <Stack
-      gap ={1}
+      gap ={0}
       justifyContent = {"space-between"}
       >
 

@@ -17,7 +17,7 @@ const Leftbar = ({
     setLocation
 }) => {
 
-    const {status , content , error} = state;
+    const {status , content , } = state;
     const [searchModal, setSearchModal] = React.useState(false);
  
     
@@ -25,14 +25,15 @@ const Leftbar = ({
   return (
     <Box
     flex = {2}
+    p={3}
     sx={{ 
-     
+     minHeight: "612px",
       background: "#1e213a",
      position: "relative"}}
     >
        <Stack 
-       direction
-       padding={3}
+       sx={{flexDirection: "row"}}
+       padding={2}
        marginBottom= {2}
        alignItems = {"center"}
        justifyContent = {searchModal?  "end" : "space-between"}
@@ -76,17 +77,17 @@ const Leftbar = ({
        }
 
        {
-        status === "loading" & !searchModal && <Loading />
+        (status === "loading" && !searchModal) && <Loading />
         }
 
        {
-        status === "success" & !searchModal && 
+        (status === "success" && !searchModal) && 
         <MainCard 
         degree = {degree}
         content = {content} />
        } 
         {
-          !searchModal & status === "error" &&  
+          (!searchModal && status === "error") &&  
           <ErrorComponent
           fetchData = {fetchData}
           state = {state}

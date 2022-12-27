@@ -26,7 +26,7 @@ const ErrorComponent = ({
         {
           error === "Failed to fetch" &&
             <Button
-            maxWidth = {180}
+            sx={{ maxWidth:180}}
             variant ="outlined"
             onClick = {()=> fetchData(state, search)}
             >

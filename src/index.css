@@ -5,6 +5,7 @@ body {
   padding: 0;
   overflow: scroll;
   font-family: 'League Spartan', sans-serif !important;
+  overflow-x: hidden;
 }
 
 .app-container {
@@ -12,7 +13,7 @@ body {
   color: gainsboro;
   background: #100e1d !important;
   overflow: scroll !important;
-  height: 220vh !important;
+  height: auto !important;
 }
 
 .temp-btn {
@@ -116,13 +117,13 @@ position: relative;
 
 
 footer {
-position: absolute;
-transform: translateX(-50%);
-bottom: 10%;
-left: 50%;
+position: fixed;
+transform: translateX(-50%, -50%);
+bottom: 0%;
+left: 60%;
 box-shadow: 10px 10px 20px #100e1d;
 
-}
+} 
 
 @media screen and (min-width: 600px) {
   .cards-container {

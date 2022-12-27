@@ -60,9 +60,11 @@ const MainSection = ({
                     variant = {"h3"}
                     >
                         {content.days[0].windspeed}
-                        <Typography variant ="h5">
+                        <span>
+                            <Typography variant ="h5">
                             mph
                         </Typography>
+                        </span>
                     </Typography>
                 </Stack>
                 

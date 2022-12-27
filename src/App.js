@@ -10,7 +10,7 @@ const App = () => {
   const [geolocation , setLocation ] = React.useState('')
   const [state, setState]  = React.useState({
     content: "",
-    status: "loading",
+    status: "idle",
     error: ""
   });
 
@@ -32,11 +32,9 @@ const App = () => {
      getLocation()
     
         
-  }, [])
+  }, []);
   
    
-  
-
 
 
 
@@ -57,7 +55,6 @@ const App = () => {
             error: "",
             status: "success"
         })
-        console.log(data)
     }
 
     catch(error){
@@ -66,9 +63,9 @@ const App = () => {
             ...state,
             status: "error",
             error: error.message
-        })
+        });
     }
-}
+};
 
 
  React.useEffect(() => {
@@ -84,6 +81,7 @@ const App = () => {
     <Stack
         className='app-container'
         sx = {{
+          overflowX: "hidden",
            position: "relative"}}
     >
         <Leftbar 

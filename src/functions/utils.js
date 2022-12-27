@@ -13,22 +13,9 @@ import LightCloud from "../assets/Shower.png";
 
 export const convert = (celsius)=> {
         return ((celsius * 9/5 ) + 32).toFixed(1)
-}
+};
 
-export const  getLocation = async ()=> {
-  try {
-    const res = await fetch ("https://ipapi.co/json")
-    const data = await res.json()
-    return {
-      lat: data.latitude, long: data.longitude
-    }
-   
-  }
 
-  catch(error) {
-   console.log(error.message)
-  }
- }
 
 export const getImage =(description)=>{
 
@@ -74,7 +61,7 @@ export const getImage =(description)=>{
     else {
       return Clear
 }
-}
+};
   
  
 

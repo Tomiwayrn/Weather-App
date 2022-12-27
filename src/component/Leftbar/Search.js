@@ -40,7 +40,11 @@ const Search = ({
     className = "search-container"
     >
         <Stack
-         direction
+         sx={{
+            flexDirection: {md: "column", sm: "row"},
+            gap: 1,
+            justifyItems: "space-between"
+         }}
          justifyContent={"space-between"}
        
          >
@@ -56,7 +60,7 @@ const Search = ({
         }
            className = "search-input"
             sx={{
-                width: "80%",
+                width: "100%",
                 color: "white"
             }}
             />
@@ -79,9 +83,10 @@ const Search = ({
         >
             {
                 prevSearch && 
-                prevSearch.slice(0, 5).map((item)=>{
+                prevSearch.slice(0, 5).map((item, i)=>{
                     return(
                         <Button
+                        key = {i}
                         sx ={{
                             color: "white",
                             padding: 1.5,
